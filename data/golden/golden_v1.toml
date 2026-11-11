@@ -1,0 +1,171 @@
+# Jeu de référence v1 : une question, et le passage du corpus qui y répond.
+#
+# Pour ajouter une question, copie un bloc [[questions]] et remplis :
+#   id        numéro unique (q003, q004, ...)
+#   category  type de question : definition, obligation, droits, sanction, delai, champ
+#   question  formulée avec TES mots, comme un vrai utilisateur, sans recopier le texte de loi
+#   doc       "rgpd" ou "ai_act"
+#   ref       "art_17" pour l'article 17, "rct_26" pour le considérant 26
+#   excerpt   une phrase copiée telle quelle depuis le texte, qui contient la réponse
+#
+# Après chaque ajout : python -I scripts/check_golden.py
+
+[[questions]]
+id = "q001"
+category = "droits"
+question = "Est-ce que je peux exiger d'une entreprise qu'elle supprime les informations qu'elle détient sur moi ?"
+doc = "rgpd"
+ref = "art_17"
+excerpt = "La personne concernée a le droit d'obtenir du responsable du traitement l'effacement, dans les meilleurs délais, de données à caractère personnel la concernant"
+
+[[questions]]
+id = "q002"
+category = "delai"
+question = "Quand le règlement européen sur l'intelligence artificielle commence-t-il à s'appliquer de manière générale ?"
+doc = "ai_act"
+ref = "art_113"
+excerpt = "Il est applicable à partir du 2 août 2026."
+
+[[questions]]
+id = "q003"
+category = "definition"
+question = "Qu'est-ce qui compte comme une information personnelle au sens de la loi européenne sur la vie privée ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "toute information se rapportant à une personne physique identifiée ou identifiable"
+
+[[questions]]
+id = "q004"
+category = "droits"
+question = "J'ai accepté qu'un site utilise mes données, est-ce que je peux changer d'avis plus tard ?"
+doc = "rgpd"
+ref = "art_7"
+excerpt = "La personne concernée a le droit de retirer son consentement à tout moment."
+
+[[questions]]
+id = "q005"
+category = "obligation"
+question = "À partir de quel âge un adolescent peut-il s'inscrire seul sur un réseau social, sans l'accord de ses parents ?"
+doc = "rgpd"
+ref = "art_8"
+excerpt = "le traitement des données à caractère personnel relatives à un enfant est licite lorsque l'enfant est âgé d'au moins 16 ans"
+
+[[questions]]
+id = "q006"
+category = "delai"
+question = "Combien de temps une entreprise a-t-elle pour me répondre quand je lui réclame une copie de mes données ?"
+doc = "rgpd"
+ref = "art_12"
+excerpt = "dans les meilleurs délais et en tout état de cause dans un délai d'un mois à compter de la réception de la demande"
+
+[[questions]]
+id = "q007"
+category = "delai"
+question = "Après un piratage, sous combien de temps une société doit-elle prévenir la CNIL ?"
+doc = "rgpd"
+ref = "art_33"
+excerpt = "72 heures au plus tard après en avoir pris connaissance"
+
+[[questions]]
+id = "q008"
+category = "obligation"
+question = "Dans quelles situations une organisation est-elle forcée de nommer un DPO ?"
+doc = "rgpd"
+ref = "art_37"
+excerpt = "Le responsable du traitement et le sous-traitant désignent en tout état de cause un délégué à la protection des données lorsque"
+
+[[questions]]
+id = "q009"
+category = "sanction"
+question = "Quel est le plafond de l'amende pour une entreprise qui ne respecte pas les règles sur les données personnelles ?"
+doc = "rgpd"
+ref = "art_83"
+excerpt = "d'amendes administratives pouvant s'élever jusqu'à 20 000 000 EUR ou, dans le cas d'une entreprise, jusqu'à 4 % du chiffre d'affaires annuel mondial total de l'exercice précédent"
+
+[[questions]]
+id = "q010"
+category = "champ"
+question = "Une société américaine sans bureau en Europe doit-elle suivre les règles européennes si elle vend à des clients français ?"
+doc = "rgpd"
+ref = "art_3"
+excerpt = "par un responsable du traitement ou un sous-traitant qui n'est pas établi dans l'Union"
+
+[[questions]]
+id = "q011"
+category = "champ"
+question = "Les règles de protection des données valent-elles pour des statistiques où plus personne n'est reconnaissable ?"
+doc = "rgpd"
+ref = "rct_26"
+excerpt = "Il n'y a dès lors pas lieu d'appliquer les principes relatifs à la protection des données aux informations anonymes"
+
+[[questions]]
+id = "q012"
+category = "definition"
+question = "Comment la loi européenne décrit-elle ce qu'est une intelligence artificielle ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "un système automatisé qui est conçu pour fonctionner à différents niveaux d'autonomie"
+
+[[questions]]
+id = "q013"
+category = "obligation"
+question = "Un État peut-il attribuer un score aux citoyens selon leur conduite, comme un crédit social ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "pour l'évaluation ou la classification de personnes physiques ou de groupes de personnes au cours d'une période donnée en fonction de leur comportement social"
+
+[[questions]]
+id = "q014"
+category = "sanction"
+question = "Que risque financièrement une entreprise qui se sert d'une IA bannie ?"
+doc = "ai_act"
+ref = "art_99"
+excerpt = "d'amendes administratives pouvant aller jusqu'à 35 000 000 EUR"
+
+[[questions]]
+id = "q015"
+category = "obligation"
+question = "Un chatbot doit-il prévenir l'utilisateur qu'il n'est pas un humain ?"
+doc = "ai_act"
+ref = "art_50"
+excerpt = "les personnes physiques concernées soient informées qu'elles interagissent avec un système d'IA"
+
+[[questions]]
+id = "q016"
+category = "champ"
+question = "Les IA conçues pour l'armée sont-elles soumises au règlement européen ?"
+doc = "ai_act"
+ref = "art_2"
+excerpt = "exclusivement à des fins militaires, de défense ou de sécurité nationale"
+
+[[questions]]
+id = "q017"
+category = "obligation"
+question = "Une entreprise doit-elle former ses salariés qui se servent d'outils d'IA ?"
+doc = "ai_act"
+ref = "art_4"
+excerpt = "un niveau suffisant de maîtrise de l'IA pour leur personnel"
+
+[[questions]]
+id = "q018"
+category = "droits"
+question = "Si un algorithme rejette mon dossier, ai-je le droit qu'on me dise pourquoi ?"
+doc = "ai_act"
+ref = "art_86"
+excerpt = "a le droit d'obtenir du déployeur des explications claires et pertinentes sur le rôle du système d'IA dans la procédure décisionnelle"
+
+[[questions]]
+id = "q019"
+category = "delai"
+question = "Sous combien de jours le fabricant d'une IA doit-il déclarer un accident sérieux causé par son système ?"
+doc = "ai_act"
+ref = "art_73"
+excerpt = "au plus tard 15 jours après que le fournisseur ou, le cas échéant, le déployeur a eu connaissance de l'incident grave"
+
+[[questions]]
+id = "q020"
+category = "definition"
+question = "À partir de quelle puissance de calcul un grand modèle de langage est-il classé comme dangereux à grande échelle ?"
+doc = "ai_act"
+ref = "art_51"
+excerpt = "lorsque la quantité cumulée de calcul utilisée pour son entraînement mesurée en opérations en virgule flottante est supérieure à 10^25"

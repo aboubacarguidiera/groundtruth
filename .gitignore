@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# régénéré par scripts/build_corpus.py
+data/corpus/
+*.egg-info/

@@ -1,0 +1,565 @@
+{
+  "config": {
+    "retriever": "bm25",
+    "rerank": false,
+    "chunk_size": 200,
+    "overlap": 40,
+    "k": 10,
+    "golden": "golden_v2.toml"
+  },
+  "chunks": 1109,
+  "overall": {
+    "n": 100,
+    "recall@5": 0.24,
+    "recall@10": 0.27,
+    "mrr@10": 0.16808333333333333,
+    "ndcg@10": 0.19250043984350249
+  },
+  "by_category": {
+    "champ": {
+      "n": 13,
+      "recall@5": 0.5384615384615384,
+      "recall@10": 0.5384615384615384,
+      "mrr@10": 0.4256410256410256,
+      "ndcg@10": 0.452834831325734
+    },
+    "definition": {
+      "n": 16,
+      "recall@5": 0.25,
+      "recall@10": 0.25,
+      "mrr@10": 0.16145833333333334,
+      "ndcg@10": 0.18316728487958706
+    },
+    "delai": {
+      "n": 14,
+      "recall@5": 0.2857142857142857,
+      "recall@10": 0.2857142857142857,
+      "mrr@10": 0.14523809523809522,
+      "ndcg@10": 0.1798416114861428
+    },
+    "droits": {
+      "n": 12,
+      "recall@5": 0.0,
+      "recall@10": 0.08333333333333333,
+      "mrr@10": 0.010416666666666666,
+      "ndcg@10": 0.026288739732144063
+    },
+    "obligation": {
+      "n": 37,
+      "recall@5": 0.16216216216216217,
+      "recall@10": 0.21621621621621623,
+      "mrr@10": 0.13153153153153152,
+      "ndcg@10": 0.15133154544461044
+    },
+    "sanction": {
+      "n": 8,
+      "recall@5": 0.375,
+      "recall@10": 0.375,
+      "mrr@10": 0.20833333333333331,
+      "ndcg@10": 0.25
+    }
+  },
+  "ms_per_query": 0.3,
+  "questions": [
+    {
+      "id": "q001",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q002",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q003",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q004",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q005",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q006",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q007",
+      "category": "delai",
+      "rank": 5
+    },
+    {
+      "id": "q008",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q009",
+      "category": "sanction",
+      "rank": null
+    },
+    {
+      "id": "q010",
+      "category": "champ",
+      "rank": null
+    },
+    {
+      "id": "q011",
+      "category": "champ",
+      "rank": 5
+    },
+    {
+      "id": "q012",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q013",
+      "category": "obligation",
+      "rank": 5
+    },
+    {
+      "id": "q014",
+      "category": "sanction",
+      "rank": null
+    },
+    {
+      "id": "q015",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q016",
+      "category": "champ",
+      "rank": null
+    },
+    {
+      "id": "q017",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q018",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q019",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q020",
+      "category": "definition",
+      "rank": 4
+    },
+    {
+      "id": "q021",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q022",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q023",
+      "category": "definition",
+      "rank": 1
+    },
+    {
+      "id": "q024",
+      "category": "definition",
+      "rank": 3
+    },
+    {
+      "id": "q025",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q026",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q027",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q028",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q029",
+      "category": "obligation",
+      "rank": 6
+    },
+    {
+      "id": "q030",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q031",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q032",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q033",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q034",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q035",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q036",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q037",
+      "category": "champ",
+      "rank": 1
+    },
+    {
+      "id": "q038",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q039",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q040",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q041",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q042",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q043",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q044",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q045",
+      "category": "champ",
+      "rank": 1
+    },
+    {
+      "id": "q046",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q047",
+      "category": "droits",
+      "rank": 8
+    },
+    {
+      "id": "q048",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q049",
+      "category": "sanction",
+      "rank": null
+    },
+    {
+      "id": "q050",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q051",
+      "category": "champ",
+      "rank": 1
+    },
+    {
+      "id": "q052",
+      "category": "champ",
+      "rank": null
+    },
+    {
+      "id": "q053",
+      "category": "champ",
+      "rank": 3
+    },
+    {
+      "id": "q054",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q055",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q056",
+      "category": "champ",
+      "rank": 1
+    },
+    {
+      "id": "q057",
+      "category": "champ",
+      "rank": null
+    },
+    {
+      "id": "q058",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q059",
+      "category": "definition",
+      "rank": 1
+    },
+    {
+      "id": "q060",
+      "category": "obligation",
+      "rank": 1
+    },
+    {
+      "id": "q061",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q062",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q063",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q064",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q065",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q066",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q067",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q068",
+      "category": "obligation",
+      "rank": 1
+    },
+    {
+      "id": "q069",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q070",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q071",
+      "category": "champ",
+      "rank": null
+    },
+    {
+      "id": "q072",
+      "category": "champ",
+      "rank": 1
+    },
+    {
+      "id": "q073",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q074",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q075",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q076",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q077",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q078",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q079",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q080",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q081",
+      "category": "obligation",
+      "rank": 6
+    },
+    {
+      "id": "q082",
+      "category": "obligation",
+      "rank": 1
+    },
+    {
+      "id": "q083",
+      "category": "obligation",
+      "rank": 1
+    },
+    {
+      "id": "q084",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q085",
+      "category": "obligation",
+      "rank": 3
+    },
+    {
+      "id": "q086",
+      "category": "obligation",
+      "rank": null
+    },
+    {
+      "id": "q087",
+      "category": "delai",
+      "rank": 2
+    },
+    {
+      "id": "q088",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q089",
+      "category": "delai",
+      "rank": 3
+    },
+    {
+      "id": "q090",
+      "category": "droits",
+      "rank": null
+    },
+    {
+      "id": "q091",
+      "category": "sanction",
+      "rank": null
+    },
+    {
+      "id": "q092",
+      "category": "sanction",
+      "rank": null
+    },
+    {
+      "id": "q093",
+      "category": "sanction",
+      "rank": 3
+    },
+    {
+      "id": "q094",
+      "category": "sanction",
+      "rank": 1
+    },
+    {
+      "id": "q095",
+      "category": "sanction",
+      "rank": 3
+    },
+    {
+      "id": "q096",
+      "category": "delai",
+      "rank": 1
+    },
+    {
+      "id": "q097",
+      "category": "champ",
+      "rank": null
+    },
+    {
+      "id": "q098",
+      "category": "delai",
+      "rank": null
+    },
+    {
+      "id": "q099",
+      "category": "definition",
+      "rank": null
+    },
+    {
+      "id": "q100",
+      "category": "obligation",
+      "rank": null
+    }
+  ]
+}

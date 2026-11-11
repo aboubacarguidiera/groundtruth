@@ -1,0 +1,962 @@
+# Jeu de référence v2 : une question, et le passage du corpus qui y répond.
+#
+# Pour ajouter une question, copie un bloc [[questions]] et remplis :
+#   id        numéro unique (q003, q004, ...)
+#   category  type de question : definition, obligation, droits, sanction, delai, champ
+#   question  formulée avec TES mots, comme un vrai utilisateur, sans recopier le texte de loi
+#   doc       "rgpd" ou "ai_act"
+#   ref       "art_17" pour l'article 17, "rct_26" pour le considérant 26
+#   excerpt   une phrase copiée telle quelle depuis le texte, qui contient la réponse
+#
+# Si un autre passage répond aussi à la question, ajoute sous le bloc :
+#   [[questions.also]] avec doc, ref et excerpt
+#
+# Après chaque ajout : python -I scripts/check_golden.py
+
+[[questions]]
+id = "q001"
+category = "droits"
+question = "Est-ce que je peux exiger d'une entreprise qu'elle supprime les informations qu'elle détient sur moi ?"
+doc = "rgpd"
+ref = "art_17"
+excerpt = "La personne concernée a le droit d'obtenir du responsable du traitement l'effacement, dans les meilleurs délais, de données à caractère personnel la concernant"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_65"
+  excerpt = "disposer d'un «droit à l'oubli» lorsque la conservation de ces données constitue une violation du présent règlement"
+
+[[questions]]
+id = "q002"
+category = "delai"
+question = "Quand le règlement européen sur l'intelligence artificielle commence-t-il à s'appliquer de manière générale ?"
+doc = "ai_act"
+ref = "art_113"
+excerpt = "Il est applicable à partir du 2 août 2026."
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_179"
+  excerpt = "Le présent règlement devrait s'appliquer à partir du 2 août 2026."
+
+[[questions]]
+id = "q003"
+category = "definition"
+question = "Qu'est-ce qui compte comme une information personnelle au sens de la loi européenne sur la vie privée ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "toute information se rapportant à une personne physique identifiée ou identifiable"
+
+[[questions]]
+id = "q004"
+category = "droits"
+question = "J'ai accepté qu'un site utilise mes données, est-ce que je peux changer d'avis plus tard ?"
+doc = "rgpd"
+ref = "art_7"
+excerpt = "La personne concernée a le droit de retirer son consentement à tout moment."
+
+[[questions]]
+id = "q005"
+category = "obligation"
+question = "À partir de quel âge un adolescent peut-il s'inscrire seul sur un réseau social, sans l'accord de ses parents ?"
+doc = "rgpd"
+ref = "art_8"
+excerpt = "le traitement des données à caractère personnel relatives à un enfant est licite lorsque l'enfant est âgé d'au moins 16 ans"
+
+[[questions]]
+id = "q006"
+category = "delai"
+question = "Combien de temps une entreprise a-t-elle pour me répondre quand je lui réclame une copie de mes données ?"
+doc = "rgpd"
+ref = "art_12"
+excerpt = "dans les meilleurs délais et en tout état de cause dans un délai d'un mois à compter de la réception de la demande"
+
+[[questions]]
+id = "q007"
+category = "delai"
+question = "Après un piratage, sous combien de temps une société doit-elle prévenir la CNIL ?"
+doc = "rgpd"
+ref = "art_33"
+excerpt = "72 heures au plus tard après en avoir pris connaissance"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_85"
+  excerpt = "72 heures au plus tard après en avoir pris connaissance"
+
+[[questions]]
+id = "q008"
+category = "obligation"
+question = "Dans quelles situations une organisation est-elle forcée de nommer un DPO ?"
+doc = "rgpd"
+ref = "art_37"
+excerpt = "Le responsable du traitement et le sous-traitant désignent en tout état de cause un délégué à la protection des données lorsque"
+
+[[questions]]
+id = "q009"
+category = "sanction"
+question = "Quel est le plafond de l'amende pour une entreprise qui ne respecte pas les règles sur les données personnelles ?"
+doc = "rgpd"
+ref = "art_83"
+excerpt = "d'amendes administratives pouvant s'élever jusqu'à 20 000 000 EUR ou, dans le cas d'une entreprise, jusqu'à 4 % du chiffre d'affaires annuel mondial total de l'exercice précédent"
+
+[[questions]]
+id = "q010"
+category = "champ"
+question = "Une société américaine sans bureau en Europe doit-elle suivre les règles européennes si elle vend à des clients français ?"
+doc = "rgpd"
+ref = "art_3"
+excerpt = "par un responsable du traitement ou un sous-traitant qui n'est pas établi dans l'Union"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_23"
+  excerpt = "par un responsable du traitement ou un sous-traitant qui n'est pas établi dans l'Union devrait être soumis au présent règlement"
+
+[[questions]]
+id = "q011"
+category = "champ"
+question = "Les règles de protection des données valent-elles pour des statistiques où plus personne n'est reconnaissable ?"
+doc = "rgpd"
+ref = "rct_26"
+excerpt = "Il n'y a dès lors pas lieu d'appliquer les principes relatifs à la protection des données aux informations anonymes"
+
+[[questions]]
+id = "q012"
+category = "definition"
+question = "Comment la loi européenne décrit-elle ce qu'est une intelligence artificielle ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "un système automatisé qui est conçu pour fonctionner à différents niveaux d'autonomie"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_12"
+  excerpt = "Une caractéristique essentielle des systèmes d'IA est leur capacité d'inférence."
+
+[[questions]]
+id = "q013"
+category = "obligation"
+question = "Un État peut-il attribuer un score aux citoyens selon leur conduite, comme un crédit social ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "pour l'évaluation ou la classification de personnes physiques ou de groupes de personnes au cours d'une période donnée en fonction de leur comportement social"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_31"
+  excerpt = "Les systèmes d'IA permettant la notation sociale des personnes physiques par des acteurs publics ou privés peuvent conduire à des résultats discriminatoires"
+
+[[questions]]
+id = "q014"
+category = "sanction"
+question = "Que risque financièrement une entreprise qui se sert d'une IA bannie ?"
+doc = "ai_act"
+ref = "art_99"
+excerpt = "d'amendes administratives pouvant aller jusqu'à 35 000 000 EUR"
+
+[[questions]]
+id = "q015"
+category = "obligation"
+question = "Un chatbot doit-il prévenir l'utilisateur qu'il n'est pas un humain ?"
+doc = "ai_act"
+ref = "art_50"
+excerpt = "les personnes physiques concernées soient informées qu'elles interagissent avec un système d'IA"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_132"
+  excerpt = "les personnes physiques devraient être avisées qu'elles interagissent avec un système d'IA"
+
+[[questions]]
+id = "q016"
+category = "champ"
+question = "Les IA conçues pour l'armée sont-elles soumises au règlement européen ?"
+doc = "ai_act"
+ref = "art_2"
+excerpt = "exclusivement à des fins militaires, de défense ou de sécurité nationale"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_24"
+  excerpt = "à des fins militaires, de défense ou de sécurité nationale, ces systèmes devraient être exclus du champ d'application du présent règlement"
+
+[[questions]]
+id = "q017"
+category = "obligation"
+question = "Une entreprise doit-elle former ses salariés qui se servent d'outils d'IA ?"
+doc = "ai_act"
+ref = "art_4"
+excerpt = "un niveau suffisant de maîtrise de l'IA pour leur personnel"
+
+[[questions]]
+id = "q018"
+category = "droits"
+question = "Si un algorithme rejette mon dossier, ai-je le droit qu'on me dise pourquoi ?"
+doc = "ai_act"
+ref = "art_86"
+excerpt = "a le droit d'obtenir du déployeur des explications claires et pertinentes sur le rôle du système d'IA dans la procédure décisionnelle"
+
+[[questions]]
+id = "q019"
+category = "delai"
+question = "Sous combien de jours le fabricant d'une IA doit-il déclarer un accident sérieux causé par son système ?"
+doc = "ai_act"
+ref = "art_73"
+excerpt = "au plus tard 15 jours après que le fournisseur ou, le cas échéant, le déployeur a eu connaissance de l'incident grave"
+
+[[questions]]
+id = "q020"
+category = "definition"
+question = "À partir de quelle puissance de calcul un grand modèle de langage est-il classé comme dangereux à grande échelle ?"
+doc = "ai_act"
+ref = "art_51"
+excerpt = "lorsque la quantité cumulée de calcul utilisée pour son entraînement mesurée en opérations en virgule flottante est supérieure à 10^25"
+
+[[questions]]
+id = "q021"
+category = "definition"
+question = "Que veut dire remplacer les noms par des codes pour protéger un fichier, au sens du texte ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "le traitement de données à caractère personnel de telle façon que celles-ci ne puissent plus être attribuées à une personne concernée précise sans avoir recours à des informations supplémentaires"
+
+[[questions]]
+id = "q022"
+category = "definition"
+question = "Comment est défini le prestataire qui manipule des données clients à la place d'une entreprise ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "qui traite des données à caractère personnel pour le compte du responsable du traitement"
+
+[[questions]]
+id = "q023"
+category = "definition"
+question = "Qu'est-ce qu'un accord valable d'une personne pour l'utilisation de ses données ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "toute manifestation de volonté, libre, spécifique, éclairée et univoque"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_32"
+  excerpt = "Le consentement devrait être donné par un acte positif clair par lequel la personne concernée manifeste de façon libre, spécifique, éclairée et univoque son accord"
+
+[[questions]]
+id = "q024"
+category = "definition"
+question = "Que recouvre le fait d'analyser automatiquement les gens pour deviner leurs goûts ou leur comportement ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "toute forme de traitement automatisé de données à caractère personnel consistant à utiliser ces données à caractère personnel pour évaluer certains aspects personnels relatifs à une personne physique"
+
+[[questions]]
+id = "q025"
+category = "definition"
+question = "Une empreinte digitale ou une photo du visage, c'est quel type de donnée selon la loi ?"
+doc = "rgpd"
+ref = "art_4"
+excerpt = "relatives aux caractéristiques physiques, physiologiques ou comportementales d'une personne physique, qui permettent ou confirment son identification unique"
+
+[[questions]]
+id = "q026"
+category = "obligation"
+question = "Une appli a-t-elle le droit de me demander plus d'informations que ce dont elle a vraiment besoin ?"
+doc = "rgpd"
+ref = "art_5"
+excerpt = "adéquates, pertinentes et limitées à ce qui est nécessaire au regard des finalités pour lesquelles elles sont traitées"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_39"
+  excerpt = "pertinentes et limitées à ce qui est nécessaire pour les finalités pour lesquelles elles sont traitées"
+
+[[questions]]
+id = "q027"
+category = "delai"
+question = "Pendant combien de temps une entreprise peut-elle garder mes données ?"
+doc = "rgpd"
+ref = "art_5"
+excerpt = "pendant une durée n'excédant pas celle nécessaire au regard des finalités pour lesquelles elles sont traitées"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_39"
+  excerpt = "la durée de conservation des données soit limitée au strict minimum"
+
+[[questions]]
+id = "q028"
+category = "obligation"
+question = "Une société peut-elle utiliser mes données sans mon accord parce qu'elle y a un intérêt commercial ?"
+doc = "rgpd"
+ref = "art_6"
+excerpt = "le traitement est nécessaire aux fins des intérêts légitimes poursuivis par le responsable du traitement ou par un tiers"
+
+[[questions]]
+id = "q029"
+category = "obligation"
+question = "Un employeur peut-il ficher la religion ou les opinions politiques de ses salariés ?"
+doc = "rgpd"
+ref = "art_9"
+excerpt = "Le traitement des données à caractère personnel qui révèle l'origine raciale ou ethnique, les opinions politiques, les convictions religieuses ou philosophiques ou l'appartenance syndicale"
+
+[[questions]]
+id = "q030"
+category = "droits"
+question = "Puis-je obtenir un double de tout ce qu'une entreprise sait sur moi ?"
+doc = "rgpd"
+ref = "art_15"
+excerpt = "Le responsable du traitement fournit une copie des données à caractère personnel faisant l'objet d'un traitement."
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_63"
+  excerpt = "droit d'accéder aux données à caractère personnel qui ont été collectées à son sujet"
+
+[[questions]]
+id = "q031"
+category = "droits"
+question = "Comment récupérer mes données pour les emmener chez un concurrent ?"
+doc = "rgpd"
+ref = "art_20"
+excerpt = "dans un format structuré, couramment utilisé et lisible par machine"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_68"
+  excerpt = "dans un format structuré, couramment utilisé, lisible par machine et interopérable"
+
+[[questions]]
+id = "q032"
+category = "droits"
+question = "Comment faire pour ne plus recevoir de publicités ciblées d'une marque ?"
+doc = "rgpd"
+ref = "art_21"
+excerpt = "la personne concernée a le droit de s'opposer à tout moment au traitement des données à caractère personnel la concernant à de telles fins de prospection"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_70"
+  excerpt = "la personne concernée devrait avoir le droit, à tout moment et sans frais, de s'opposer à ce traitement"
+
+[[questions]]
+id = "q033"
+category = "droits"
+question = "Une banque peut-elle refuser mon crédit uniquement sur la base d'un calcul fait par un ordinateur ?"
+doc = "rgpd"
+ref = "art_22"
+excerpt = "La personne concernée a le droit de ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé"
+
+[[questions]]
+id = "q034"
+category = "droits"
+question = "Est-ce que je dois payer pour exercer mes droits sur mes données ?"
+doc = "rgpd"
+ref = "art_12"
+excerpt = "Aucun paiement n'est exigé pour fournir les informations au titre des articles 13 et 14"
+
+[[questions]]
+id = "q035"
+category = "delai"
+question = "L'entreprise peut-elle prendre plus de temps pour traiter ma demande si elle est compliquée ?"
+doc = "rgpd"
+ref = "art_12"
+excerpt = "ce délai peut être prolongé de deux mois, compte tenu de la complexité et du nombre de demandes"
+
+[[questions]]
+id = "q036"
+category = "obligation"
+question = "Faut-il signer un document avec le prestataire à qui on confie des données clients ?"
+doc = "rgpd"
+ref = "art_28"
+excerpt = "Le traitement par un sous-traitant est régi par un contrat ou un autre acte juridique"
+
+[[questions]]
+id = "q037"
+category = "champ"
+question = "Une petite boîte de 30 personnes doit-elle tenir une liste de tous ses fichiers de données ?"
+doc = "rgpd"
+ref = "art_30"
+excerpt = "ne s'appliquent pas à une entreprise ou à une organisation comptant moins de 250 employés"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_13"
+  excerpt = "une dérogation pour les organisations occupant moins de 250 employés en ce qui concerne la tenue de registres"
+
+[[questions]]
+id = "q038"
+category = "obligation"
+question = "Quelles protections techniques sont attendues pour sécuriser des données ?"
+doc = "rgpd"
+ref = "art_32"
+excerpt = "la pseudonymisation et le chiffrement des données à caractère personnel"
+
+[[questions]]
+id = "q039"
+category = "obligation"
+question = "Si mes données ont fuité, l'entreprise doit-elle me le dire personnellement ?"
+doc = "rgpd"
+ref = "art_34"
+excerpt = "le responsable du traitement communique la violation de données à caractère personnel à la personne concernée dans les meilleurs délais"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_86"
+  excerpt = "Le responsable du traitement devrait communiquer une violation de données à caractère personnel à la personne concernée dans les meilleurs délais"
+
+[[questions]]
+id = "q040"
+category = "obligation"
+question = "Avant de lancer un projet risqué pour la vie privée, quelle étude faut-il mener ?"
+doc = "rgpd"
+ref = "art_35"
+excerpt = "le responsable du traitement effectue, avant le traitement, une analyse de l'impact des opérations de traitement envisagées sur la protection des données à caractère personnel"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_84"
+  excerpt = "le responsable du traitement devrait assumer la responsabilité d'effectuer une analyse d'impact relative à la protection des données"
+
+[[questions]]
+id = "q041"
+category = "delai"
+question = "Combien de temps le régulateur a-t-il pour rendre son avis quand on le consulte sur un projet risqué ?"
+doc = "rgpd"
+ref = "art_36"
+excerpt = "dans un délai maximum de huit semaines à compter de la réception de la demande de consultation"
+
+[[questions]]
+id = "q042"
+category = "obligation"
+question = "Une entreprise hors d'Europe qui cible des Européens doit-elle avoir un correspondant sur place ?"
+doc = "rgpd"
+ref = "art_27"
+excerpt = "le responsable du traitement ou le sous-traitant désigne par écrit un représentant dans l'Union"
+
+[[questions]]
+id = "q043"
+category = "obligation"
+question = "Le patron peut-il donner des ordres au DPO sur la façon de faire son travail ?"
+doc = "rgpd"
+ref = "art_38"
+excerpt = "veillent à ce que le délégué à la protection des données ne reçoive aucune instruction en ce qui concerne l'exercice des missions"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_97"
+  excerpt = "devraient être en mesure d'exercer leurs fonctions et missions en toute indépendance"
+
+[[questions]]
+id = "q044"
+category = "obligation"
+question = "Le DPO doit-il forcément être un salarié, ou peut-on prendre un consultant externe ?"
+doc = "rgpd"
+ref = "art_37"
+excerpt = "peut être un membre du personnel du responsable du traitement ou du sous-traitant, ou exercer ses missions sur la base d'un contrat de service"
+
+[[questions]]
+id = "q045"
+category = "champ"
+question = "À quelle condition peut-on envoyer des données vers un pays hors d'Europe sans autorisation particulière ?"
+doc = "rgpd"
+ref = "art_45"
+excerpt = "lorsque la Commission a constaté par voie de décision que le pays tiers"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_103"
+  excerpt = "La Commission peut décider, avec effet dans l'ensemble de l'Union, qu'un pays tiers"
+
+[[questions]]
+id = "q046"
+category = "definition"
+question = "Quand une entreprise est présente dans plusieurs pays européens, quel régulateur pilote le dossier ?"
+doc = "rgpd"
+ref = "art_56"
+excerpt = "est compétente pour agir en tant qu'autorité de contrôle chef de file concernant le traitement transfrontalier"
+
+[[questions]]
+id = "q047"
+category = "droits"
+question = "Auprès de qui me plaindre si je pense que mes données sont mal utilisées ?"
+doc = "rgpd"
+ref = "art_77"
+excerpt = "toute personne concernée a le droit d'introduire une réclamation auprès d'une autorité de contrôle"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_141"
+  excerpt = "Toute personne concernée devrait avoir le droit d'introduire une réclamation auprès d'une seule autorité de contrôle"
+
+[[questions]]
+id = "q048"
+category = "droits"
+question = "Puis-je être indemnisé si une entreprise m'a causé du tort en gérant mal mes données ?"
+doc = "rgpd"
+ref = "art_82"
+excerpt = "a le droit d'obtenir du responsable du traitement ou du sous-traitant réparation du préjudice subi"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_146"
+  excerpt = "Les personnes concernées devraient recevoir une réparation complète et effective pour le dommage subi."
+
+[[questions]]
+id = "q049"
+category = "sanction"
+question = "Quelle amende pour les manquements moins graves, comme ne pas tenir de registre ?"
+doc = "rgpd"
+ref = "art_83"
+excerpt = "d'amendes administratives pouvant s'élever jusqu'à 10 000 000 EUR ou, dans le cas d'une entreprise, jusqu'à 2 % du chiffre d'affaires annuel mondial total"
+
+[[questions]]
+id = "q050"
+category = "delai"
+question = "Depuis quand la réglementation européenne sur les données personnelles est-elle en application ?"
+doc = "rgpd"
+ref = "art_99"
+excerpt = "Il est applicable à partir du 25 mai 2018."
+
+[[questions]]
+id = "q051"
+category = "champ"
+question = "Mon carnet d'adresses personnel sur mon téléphone est-il concerné par cette réglementation ?"
+doc = "rgpd"
+ref = "art_2"
+excerpt = "par une personne physique dans le cadre d'une activité strictement personnelle ou domestique"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_18"
+  excerpt = "effectués par une personne physique au cours d'activités strictement personnelles ou domestiques"
+
+[[questions]]
+id = "q052"
+category = "champ"
+question = "Les informations sur une personne morte sont-elles encore protégées ?"
+doc = "rgpd"
+ref = "rct_27"
+excerpt = "Le présent règlement ne s'applique pas aux données à caractère personnel des personnes décédées."
+
+[[questions]]
+id = "q053"
+category = "champ"
+question = "Les coordonnées d'une société (nom, adresse du siège) sont-elles protégées comme celles d'un particulier ?"
+doc = "rgpd"
+ref = "rct_14"
+excerpt = "Le présent règlement ne couvre pas le traitement des données à caractère personnel qui concernent les personnes morales"
+
+[[questions]]
+id = "q054"
+category = "droits"
+question = "Un journal peut-il refuser de retirer un article qui parle de moi ?"
+doc = "rgpd"
+ref = "art_17"
+excerpt = "à l'exercice du droit à la liberté d'expression et d'information"
+
+[[questions]]
+id = "q055"
+category = "obligation"
+question = "Si c'est le prestataire qui se fait pirater, doit-il avertir son client ?"
+doc = "rgpd"
+ref = "art_33"
+excerpt = "Le sous-traitant notifie au responsable du traitement toute violation de données à caractère personnel"
+
+[[questions]]
+id = "q056"
+category = "champ"
+question = "Un pays peut-il fixer un âge plus bas que 16 ans pour l'inscription des jeunes en ligne ?"
+doc = "rgpd"
+ref = "art_8"
+excerpt = "pour autant que cet âge inférieur ne soit pas en-dessous de 13 ans"
+
+[[questions]]
+id = "q057"
+category = "champ"
+question = "Les journalistes sont-ils soumis aux mêmes contraintes que les entreprises pour traiter des données ?"
+doc = "rgpd"
+ref = "art_85"
+excerpt = "y compris le traitement à des fins journalistiques et à des fins d'expression universitaire, artistique ou littéraire"
+  [[questions.also]]
+  doc = "rgpd"
+  ref = "rct_153"
+  excerpt = "il y a lieu de prévoir des dérogations ou des exemptions à certaines dispositions du présent règlement"
+
+[[questions]]
+id = "q058"
+category = "obligation"
+question = "Qui doit prouver que j'ai bien donné mon accord ?"
+doc = "rgpd"
+ref = "art_7"
+excerpt = "le responsable du traitement est en mesure de démontrer que la personne concernée a donné son consentement"
+
+[[questions]]
+id = "q059"
+category = "definition"
+question = "Une adresse IP ou un cookie, est-ce que ça permet d'identifier quelqu'un ?"
+doc = "rgpd"
+ref = "rct_30"
+excerpt = "des identifiants en ligne tels que des adresses IP et des témoins de connexion"
+
+[[questions]]
+id = "q060"
+category = "obligation"
+question = "Une case déjà cochée sur un formulaire, ça vaut accord ?"
+doc = "rgpd"
+ref = "rct_32"
+excerpt = "Il ne saurait dès lors y avoir de consentement en cas de silence, de cases cochées par défaut ou d'inactivité."
+
+[[questions]]
+id = "q061"
+category = "definition"
+question = "Qui est considéré comme le fabricant d'une IA aux yeux du règlement ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "qui développe ou fait développer un système d'IA ou un modèle d'IA à usage général et le met sur le marché"
+
+[[questions]]
+id = "q062"
+category = "definition"
+question = "Comment le texte désigne-t-il l'entreprise qui utilise une IA achetée à un autre, et que recouvre ce terme ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "utilisant sous sa propre autorité un système d'IA sauf lorsque ce système est utilisé dans le cadre d'une activité personnelle à caractère non professionnel"
+
+[[questions]]
+id = "q063"
+category = "definition"
+question = "Qu'est-ce qu'un deepfake selon la loi européenne ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "une image ou un contenu audio ou vidéo généré ou manipulé par l'IA, présentant une ressemblance avec des personnes, des objets, des lieux, des entités ou événements existants"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_134"
+  excerpt = "présentant une ressemblance sensible avec des personnes, des objets, des lieux, des entités ou des événements existants"
+
+[[questions]]
+id = "q064"
+category = "definition"
+question = "Comment sont définis les grands modèles polyvalents, comme ceux derrière les assistants conversationnels ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "qui présente une généralité significative et est capable d'exécuter de manière compétente un large éventail de tâches distinctes"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_97"
+  excerpt = "en particulier la généralité et la capacité d'exécuter de manière compétente un large éventail de tâches distinctes"
+
+[[questions]]
+id = "q065"
+category = "definition"
+question = "Qu'est-ce qu'un espace de test encadré par l'État pour les startups de l'IA ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "un cadre contrôlé mis en place par une autorité compétente qui offre aux fournisseurs ou fournisseurs potentiels de systèmes d'IA la possibilité de développer, d'entraîner, de valider et de tester"
+
+[[questions]]
+id = "q066"
+category = "obligation"
+question = "A-t-on le droit de vendre une IA qui influence les gens à leur insu ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "qui a recours à des techniques subliminales, au-dessous du seuil de conscience d'une personne"
+
+[[questions]]
+id = "q067"
+category = "obligation"
+question = "Mon employeur peut-il utiliser une IA pour détecter si je suis stressé ou en colère ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "pour inférer les émotions d'une personne physique sur le lieu de travail et dans les établissements d'enseignement"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_44"
+  excerpt = "pour déterminer l'état émotionnel de personnes physiques dans des situations liées au lieu de travail et à l'enseignement"
+
+[[questions]]
+id = "q068"
+category = "obligation"
+question = "Peut-on aspirer des photos de visages sur internet pour entraîner un outil de reconnaissance faciale ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "par le moissonnage non ciblé d'images faciales provenant de l'internet ou de la vidéosurveillance"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_43"
+  excerpt = "par le moissonnage non ciblé d'images faciales provenant de l'internet ou de la vidéosurveillance"
+
+[[questions]]
+id = "q069"
+category = "obligation"
+question = "La police peut-elle scanner les visages des passants dans la rue en direct ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "l'utilisation de systèmes d'identification biométrique à distance en temps réel dans des espaces accessibles au public à des fins répressives"
+
+[[questions]]
+id = "q070"
+category = "obligation"
+question = "Une IA peut-elle servir à deviner qui va commettre un crime à partir de son profil ?"
+doc = "ai_act"
+ref = "art_5"
+excerpt = "visant à évaluer ou à prédire le risque qu'une personne physique commette une infraction pénale"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_42"
+  excerpt = "Une personne physique ne devrait jamais être jugée sur la base d'un comportement prédit par l'IA uniquement sur la base de son profilage"
+
+[[questions]]
+id = "q071"
+category = "champ"
+question = "Un modèle publié en open source échappe-t-il au règlement ?"
+doc = "ai_act"
+ref = "art_2"
+excerpt = "Le présent règlement ne s'applique pas aux systèmes d'IA publiés dans le cadre de licences libres et ouvertes"
+
+[[questions]]
+id = "q072"
+category = "champ"
+question = "Une IA qui figure dans la liste des usages sensibles peut-elle quand même éviter le classement à haut risque ?"
+doc = "ai_act"
+ref = "art_6"
+excerpt = "n'est pas considéré comme étant à haut risque lorsqu'il ne présente pas de risque important de préjudice pour la santé, la sécurité ou les droits fondamentaux"
+
+[[questions]]
+id = "q073"
+category = "obligation"
+question = "Faut-il un dispositif permanent pour repérer et traiter les dangers d'une IA sensible ?"
+doc = "ai_act"
+ref = "art_9"
+excerpt = "Un système de gestion des risques est établi, mis en œuvre, documenté et tenu à jour"
+
+[[questions]]
+id = "q074"
+category = "obligation"
+question = "Une IA à haut risque doit-elle garder une trace de ce qu'elle fait ?"
+doc = "ai_act"
+ref = "art_12"
+excerpt = "permettent, techniquement, l'enregistrement automatique des événements (journaux) tout au long de la durée de vie du système"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_71"
+  excerpt = "l'enregistrement automatique des événements, au moyen de journaux, tout au long de la durée de vie du système"
+
+[[questions]]
+id = "q075"
+category = "obligation"
+question = "Le fabricant doit-il fournir un mode d'emploi avec une IA sensible ?"
+doc = "ai_act"
+ref = "art_13"
+excerpt = "sont accompagnés d'une notice d'utilisation dans un format numérique approprié ou autre"
+
+[[questions]]
+id = "q076"
+category = "obligation"
+question = "Comment éviter que les opérateurs fassent aveuglément confiance à ce que dit la machine ?"
+doc = "ai_act"
+ref = "art_14"
+excerpt = "d'avoir conscience d'une éventuelle tendance à se fier automatiquement ou excessivement aux sorties produites par un système d'IA à haut risque"
+
+[[questions]]
+id = "q077"
+category = "obligation"
+question = "Quel niveau de fiabilité et de protection contre les attaques informatiques est exigé d'une IA sensible ?"
+doc = "ai_act"
+ref = "art_15"
+excerpt = "un niveau approprié d'exactitude, de robustesse et de cybersécurité"
+
+[[questions]]
+id = "q078"
+category = "delai"
+question = "Combien de temps le fabricant doit-il garder les historiques générés par son IA ?"
+doc = "ai_act"
+ref = "art_19"
+excerpt = "les journaux sont conservés pendant une période adaptée à la destination du système d'IA à haut risque, d'au moins six mois"
+
+[[questions]]
+id = "q079"
+category = "obligation"
+question = "Un éditeur d'IA installé aux États-Unis doit-il nommer quelqu'un en Europe avant de vendre ?"
+doc = "ai_act"
+ref = "art_22"
+excerpt = "les fournisseurs établis dans des pays tiers désignent, par mandat écrit, un mandataire établi dans l'Union"
+
+[[questions]]
+id = "q080"
+category = "obligation"
+question = "Une entreprise doit-elle prévenir ses employés avant d'installer une IA sensible au bureau ?"
+doc = "ai_act"
+ref = "art_26"
+excerpt = "les déployeurs qui sont des employeurs informent les représentants des travailleurs et les travailleurs concernés"
+
+[[questions]]
+id = "q081"
+category = "obligation"
+question = "Un service public doit-il étudier les conséquences sur les libertés avant d'utiliser une IA sensible ?"
+doc = "ai_act"
+ref = "art_27"
+excerpt = "effectuent une analyse de l'impact sur les droits fondamentaux que l'utilisation de ce système peut produire"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_96"
+  excerpt = "devraient procéder à une analyse d'impact de ces systèmes concernant les droits fondamentaux avant de les mettre en service"
+
+[[questions]]
+id = "q082"
+category = "obligation"
+question = "Faut-il déclarer son IA à haut risque dans un registre européen avant de la vendre ?"
+doc = "ai_act"
+ref = "art_49"
+excerpt = "s'enregistre dans la base de données de l'UE visée à l'article 71 et y enregistre aussi son système"
+
+[[questions]]
+id = "q083"
+category = "obligation"
+question = "Les images créées par une IA doivent-elles porter un filigrane ou une marque technique ?"
+doc = "ai_act"
+ref = "art_50"
+excerpt = "veillent à ce que les sorties des systèmes d'IA soient marquées dans un format lisible par machine et identifiables comme ayant été générées ou manipulées par une IA"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_133"
+  excerpt = "telles que les filigranes, les identifications de métadonnées"
+
+[[questions]]
+id = "q084"
+category = "obligation"
+question = "Si je publie une fausse vidéo d'une célébrité faite par IA, dois-je le signaler ?"
+doc = "ai_act"
+ref = "art_50"
+excerpt = "constituant un hypertrucage indiquent que les contenus ont été générés ou manipulés par une IA"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_134"
+  excerpt = "devraient aussi déclarer de manière claire et reconnaissable que le contenu a été créé ou manipulé par une IA"
+
+[[questions]]
+id = "q085"
+category = "obligation"
+question = "Les créateurs de grands modèles doivent-ils respecter les œuvres protégées utilisées pour l'entraînement ?"
+doc = "ai_act"
+ref = "art_53"
+excerpt = "mettent en place une politique visant à se conformer au droit de l'Union en matière de droit d'auteur et droits voisins"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_108"
+  excerpt = "mettre en place une politique visant à respecter la législation de l'Union sur le droit d'auteur"
+
+[[questions]]
+id = "q086"
+category = "obligation"
+question = "Les modèles les plus puissants doivent-ils subir des tests d'attaque (red teaming) ?"
+doc = "ai_act"
+ref = "art_55"
+excerpt = "y compris en réalisant et en documentant des essais contradictoires des modèles en vue d'identifier et d'atténuer les risques systémiques"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_114"
+  excerpt = "y compris la réalisation et la documentation d'essais contradictoires des modèles"
+
+[[questions]]
+id = "q087"
+category = "delai"
+question = "Pour quand les guides de bonnes pratiques des modèles généralistes devaient-ils être terminés ?"
+doc = "ai_act"
+ref = "art_56"
+excerpt = "Les codes de bonne pratique sont prêts au plus tard le 2 mai 2025."
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_179"
+  excerpt = "Les codes de bonne pratique devraient être prêts au plus tard le 2 mai 2025"
+
+[[questions]]
+id = "q088"
+category = "delai"
+question = "Quand chaque pays doit-il avoir ouvert son espace d'expérimentation pour l'IA ?"
+doc = "ai_act"
+ref = "art_57"
+excerpt = "au moins un bac à sable réglementaire de l'IA au niveau national, qui est opérationnel au plus tard le 2 août 2026"
+
+[[questions]]
+id = "q089"
+category = "delai"
+question = "En cas d'incident touchant une infrastructure critique ou de problème massif, quel est le délai d'alerte ?"
+doc = "ai_act"
+ref = "art_73"
+excerpt = "au plus tard deux jours après que le fournisseur ou, le cas échéant, le déployeur a eu connaissance de cet incident"
+
+[[questions]]
+id = "q090"
+category = "droits"
+question = "Où signaler une IA qui me semble enfreindre le règlement ?"
+doc = "ai_act"
+ref = "art_85"
+excerpt = "peut déposer des réclamations auprès de l'autorité de surveillance du marché concernée"
+
+[[questions]]
+id = "q091"
+category = "sanction"
+question = "Quelle amende pour une IA à haut risque qui ne respecte pas ses obligations, hors pratiques interdites ?"
+doc = "ai_act"
+ref = "art_99"
+excerpt = "d'une amende administrative pouvant aller jusqu'à 15 000 000 EUR ou, si l'auteur de l'infraction est une entreprise, jusqu'à 3 % de son chiffre d'affaires annuel mondial total"
+
+[[questions]]
+id = "q092"
+category = "sanction"
+question = "Que risque-t-on si on ment aux autorités dans un dossier sur une IA ?"
+doc = "ai_act"
+ref = "art_99"
+excerpt = "La fourniture d'informations inexactes, incomplètes ou trompeuses aux organismes notifiés ou aux autorités nationales compétentes"
+
+[[questions]]
+id = "q093"
+category = "sanction"
+question = "Les startups sont-elles traitées avec plus d'indulgence pour les sanctions ?"
+doc = "ai_act"
+ref = "art_99"
+excerpt = "Elles tiennent compte des intérêts des PME, y compris les jeunes pousses, et de leur viabilité économique."
+
+[[questions]]
+id = "q094"
+category = "sanction"
+question = "Une institution européenne qui utiliserait une IA interdite risque quelle amende ?"
+doc = "ai_act"
+ref = "art_100"
+excerpt = "d'une amende administrative pouvant aller jusqu'à 1 500 000 EUR"
+
+[[questions]]
+id = "q095"
+category = "sanction"
+question = "Quelle sanction la Commission peut-elle infliger aux éditeurs de grands modèles généralistes ?"
+doc = "ai_act"
+ref = "art_101"
+excerpt = "des amendes n'excédant pas 3 % de leur chiffre d'affaires annuel mondial total réalisé au cours de l'exercice précédent, ou 15 000 000 EUR"
+
+[[questions]]
+id = "q096"
+category = "delai"
+question = "À partir de quand les règles sur les modèles d'IA généralistes s'appliquent-elles ?"
+doc = "ai_act"
+ref = "art_113"
+excerpt = "s'appliquent à partir du 2 août 2025, à l'exception de l'article 101"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_179"
+  excerpt = "les obligations incombant aux fournisseurs de modèles d'IA à usage général devraient s'appliquer à compter du 2 août 2025"
+
+[[questions]]
+id = "q097"
+category = "champ"
+question = "Un simple programme avec des règles écrites à la main par un développeur compte-t-il comme une IA ?"
+doc = "ai_act"
+ref = "rct_12"
+excerpt = "ne devrait pas couvrir les systèmes fondés sur les règles définies uniquement par les personnes physiques pour exécuter automatiquement des opérations"
+
+[[questions]]
+id = "q098"
+category = "delai"
+question = "Avant quelle date les pays doivent-ils publier comment joindre leurs autorités chargées de l'IA ?"
+doc = "ai_act"
+ref = "art_70"
+excerpt = "peuvent être contactés, par voie électronique, au plus tard le 2 août 2025"
+
+[[questions]]
+id = "q099"
+category = "definition"
+question = "Qu'est-ce qui est considéré comme un accident sérieux causé par une IA ?"
+doc = "ai_act"
+ref = "art_3"
+excerpt = "un incident ou dysfonctionnement d'un système d'IA entraînant directement ou indirectement"
+
+[[questions]]
+id = "q100"
+category = "obligation"
+question = "Le fabricant doit-il continuer à suivre son IA une fois qu'elle est vendue ?"
+doc = "ai_act"
+ref = "art_72"
+excerpt = "Les fournisseurs établissent et documentent un système de surveillance après commercialisation"
+  [[questions.also]]
+  doc = "ai_act"
+  ref = "rct_155"
+  excerpt = "tous les fournisseurs devraient avoir mis en place un système de surveillance après commercialisation"
