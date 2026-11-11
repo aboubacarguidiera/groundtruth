@@ -4,6 +4,7 @@ import pytest
 
 from groundtruth.data import Question, chunk_units, relevant_chunks
 from groundtruth.metrics import first_relevant_rank, ndcg_at_k, recall_at_k, reciprocal_rank, summarize
+from groundtruth.regression import find_regressions
 from groundtruth.retrievers import BM25Retriever, HybridRetriever, tokenize
 
 UNITS = {"doc:art_1": " ".join(f"mot{i}" for i in range(10))}
@@ -96,3 +97,14 @@ class FixedRanking:
 def test_hybrid_prefers_chunks_ranked_well_by_both_engines():
     hybrid = HybridRetriever(FixedRanking([5, 1, 2]), FixedRanking([9, 1, 5]))
     assert hybrid.search("?", k=2) == [5, 1]
+
+
+def test_regression_tolerates_one_point_but_not_two():
+    baseline = {"bm25": 0.27, "dense": 0.49}
+    assert find_regressions(baseline, {"bm25": 0.26, "dense": 0.55}) == []
+    problems = find_regressions(baseline, {"bm25": 0.27, "dense": 0.47})
+    assert len(problems) == 1 and problems[0].startswith("dense")
+
+
+def test_regression_flags_a_missing_score():
+    assert find_regressions({"bm25": 0.27}, {}) == ["bm25 : score absent"]
