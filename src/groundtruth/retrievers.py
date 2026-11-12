@@ -82,7 +82,7 @@ class DenseRetriever:
         self._embedder = embedder
         # Les modèles E5 attendent les préfixes "passage: " et "query: "
         self._embeddings = embedder.encode(
-            [f"passage: {chunk.text}" for chunk in chunks],
+            [f"passage: {chunk.text[:200]}" for chunk in chunks],
             normalize_embeddings=True,
             batch_size=32,
             show_progress_bar=False,
