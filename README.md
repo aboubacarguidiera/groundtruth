@@ -78,7 +78,7 @@ RÉGRESSION :
   dense : recall@10 0.34, référence 0.49 (baisse de 15 points)
 ```
 
-Le code de sortie est 1, ce qui fait échouer la CI. Cet essai a été fait en local ; le workflow n'a pas encore tourné sur GitHub.
+Le code de sortie est 1, ce qui fait échouer la CI. La sortie ci-dessus vient d'une exécution locale ; sur GitHub, la CI est verte sur `main` et rouge sur la [pull request de démonstration](https://github.com/aboubacarguidiera/groundtruth/pull/1), qui contient ce bug et n'est pas fusionnée.
 
 Quand un changement améliore un score, `python -m groundtruth.regression --update` enregistre la nouvelle référence. Le reclassement n'est pas contrôlé : il prend environ sept minutes pour 100 questions.
 
@@ -88,7 +88,7 @@ Le projet est fini quand ces quatre points sont cochés :
 
 - [x] Trois configurations comparées dans un tableau (taille des morceaux, hybride ou dense, reranker ou non)
 - [x] Une recommandation écrite, avec le compromis
-- [ ] La CI échoue sur un changement volontairement mauvais (recall@10 en baisse de plus d'un point)
+- [x] La CI échoue sur un changement volontairement mauvais (recall@10 en baisse de plus d'un point)
 - [x] Cinq requêtes qui échouent encore, avec l'explication
 
 ## Étapes
@@ -96,7 +96,7 @@ Le projet est fini quand ces quatre points sont cochés :
 - [x] **1. Corpus et 20 questions** : corpus découpé, 20 questions rédigées avec un modèle puis relues une par une, validées par `check_golden.py`
 - [x] **2. Retrieval de base** : BM25 et dense, recall@k, MRR, nDCG par catégorie
 - [x] **3. 100 questions et trois configurations** : 100 questions, 18 configurations comparées (3 tailles x 3 moteurs x reclassement)
-- [ ] **4. CI et README final**
+- [x] **4. CI et README final** : contrôle de régression dans la CI, cinq requêtes en échec expliquées
 
 ## Corpus
 
