@@ -78,7 +78,7 @@ RÉGRESSION :
   dense : recall@10 0.34, référence 0.49 (baisse de 15 points)
 ```
 
-Le code de sortie est 1, ce qui fait échouer la CI. La sortie ci-dessus vient d'une exécution locale ; sur GitHub, la CI est verte sur `main` et rouge sur la [pull request de démonstration](https://github.com/aboubacarguidiera/groundtruth/pull/1), qui contient ce bug et n'est pas fusionnée.
+Le code de sortie est 1, ce qui fait échouer la CI. Sur GitHub, la CI est verte sur `main` et rouge, avec cette même sortie, sur la [pull request de démonstration](https://github.com/aboubacarguidiera/groundtruth/pull/1), qui contient ce bug et n'est pas fusionnée.
 
 Quand un changement améliore un score, `python -m groundtruth.regression --update` enregistre la nouvelle référence. Le reclassement n'est pas contrôlé : il prend environ sept minutes pour 100 questions.
 
